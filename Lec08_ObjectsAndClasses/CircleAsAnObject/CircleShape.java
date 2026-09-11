@@ -24,7 +24,7 @@ public class CircleShape {
     public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter radius: ");
-        radius = scanner.nextDouble();
+        double radius = scanner.nextDouble();
     }
 
     public void output() {

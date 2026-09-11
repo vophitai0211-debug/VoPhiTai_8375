@@ -20,11 +20,11 @@ public class Book {
     public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter title: ");
-        title = scanner.nextLine();
+        String title = scanner.nextLine();
         System.out.println("Enter author: ");
-        author = scanner.nextLine();
+        String author = scanner.nextLine();
         System.out.println("Enter price: ");
-        price = scanner.nextDouble();
+        double price = scanner.nextDouble();
     }
 
     public void displayBookInfor() {

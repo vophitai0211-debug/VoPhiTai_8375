@@ -19,11 +19,11 @@ public class Student {
     public void input(){
         Scanner scanner=new Scanner(System.in);
         System.out.print("Enter ID: ");
-        studentID=scanner.nextLine();
+        String studentID=scanner.nextLine();
         System.out.print("Enter full name: ");
-        fullName=scanner.nextLine();
+        String fullName=scanner.nextLine();
         System.out.print("Enter major: ");
-        major=scanner.nextLine();
+        String major=scanner.nextLine();
     }
 
     public void displayInfor() {

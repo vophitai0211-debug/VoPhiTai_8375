@@ -27,9 +27,9 @@ public class Rectangular {
     public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter length: ");
-        length = scanner.nextDouble();
+        double length = scanner.nextDouble();
         System.out.print("Enter width: ");
-        width = scanner.nextDouble();
+        double width = scanner.nextDouble();
     }
 
     public void display() {
