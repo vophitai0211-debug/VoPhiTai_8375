@@ -1,4 +1,4 @@
-package Lec10_AbstractAndInterface.AbstractClass.Example2;
+package Lec10_AbstractAndInterface.AbstractClass.AbstractMethod;
 
 public class Square extends Shape {
 
