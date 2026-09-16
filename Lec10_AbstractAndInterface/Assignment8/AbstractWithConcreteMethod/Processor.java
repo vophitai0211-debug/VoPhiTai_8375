@@ -1,4 +1,4 @@
-package Lec10_AbstractAndInterface.AbstractClass.AbstractWithConcreteMethod;
+package Lec10_AbstractAndInterface.Assignment8.AbstractWithConcreteMethod;
 
 public class Processor {
 
