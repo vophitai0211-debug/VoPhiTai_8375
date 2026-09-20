@@ -6,7 +6,7 @@ public class Processor {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        PersonArrayList personList = new PersonArrayList();
+        PersonList personList = new PersonList();
         int option;
 
         do {

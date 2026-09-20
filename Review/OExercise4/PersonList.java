@@ -2,7 +2,7 @@ package Review.OExercise4;
 
 import java.util.ArrayList;
 
-public class PersonArrayList {
+public class PersonList {
 
     private ArrayList<Person> personArrayList = new ArrayList<>();
 
@@ -45,15 +45,17 @@ public class PersonArrayList {
         }
     }
     public void checkBookBorrowing() {
-        boolean hasOverdue = false;
-        for (Person person : personArrayList) {
-            if (person.isBookOverdue()) {
-                System.out.println("Person ID: " + person.getId() + " - " + person.getFullName() + " is OVERDUE!");
-                hasOverdue = true;
-            }
+        if (personArrayList.isEmpty()) {
+            System.out.println("List is empty!");
+            return;
         }
-        if (!hasOverdue) {
-            System.out.println("No one is overdue for book return.");
+        for (Person person : personArrayList) {
+            System.out.print("ID: " + person.getId() + " - Name: " + person.getFullName() + " -> ");
+            if (person.isBookOverdue()) {
+                System.out.println("Overdue");
+            } else {
+                System.out.println("No overdue");
+            }
         }
     }
     public void findTeachersByDepartment(String department) {

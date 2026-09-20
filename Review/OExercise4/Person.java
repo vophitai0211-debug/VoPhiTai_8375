@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public abstract class Person implements IPerson {
-
+    Scanner scanner=new Scanner(System.in);
     private String id;
     private String fullName;
     private Date dateOfBirth;
@@ -64,19 +64,19 @@ public abstract class Person implements IPerson {
         return id;
     }
 
-    public Boolean isBookOverdue() {
-        if (bookReturnDate == null) {
+    public boolean isBookOverdue() {
+        if (bookBrrowDate == null || bookReturnDate == null) {
             return false;
         }
-        Date today = new Date();
-        return today.after(bookReturnDate);
+        long diffInMillis = bookReturnDate.getTime() - bookBrrowDate.getTime();
+        long diffInDays = diffInMillis / (1000L * 60 * 60 * 24);
+        return diffInDays >= 30;
     }
 
     @Override
     public void addPerson() {
         try {
-            Scanner scanner = new Scanner(System.in);
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             System.out.print("Enter id: ");
             setId(scanner.nextLine());
             System.out.print("Enter full name: ");
@@ -95,8 +95,7 @@ public abstract class Person implements IPerson {
     @Override
     public void updatePerson() {
         try {
-            Scanner scanner = new Scanner(System.in);
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             System.out.print("Enter full name: ");
             setFullName(scanner.nextLine());
             System.out.print("Enter date of birth: ");

@@ -36,7 +36,6 @@ public class Student extends Person {
     @Override
     public void addPerson() {
         super.addPerson();
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter gpa: ");
         setGpa(scanner.nextFloat());
         scanner.nextLine();
@@ -47,7 +46,6 @@ public class Student extends Person {
     @Override
     public void updatePerson() {
         super.updatePerson();
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter gpa: ");
         setGpa(scanner.nextFloat());
         scanner.nextLine();

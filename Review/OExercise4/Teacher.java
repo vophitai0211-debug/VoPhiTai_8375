@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Teacher extends Person {
-
     private String department;
     private String teachingSubject;
 
@@ -36,7 +35,6 @@ public class Teacher extends Person {
     @Override
     public void addPerson() {
         super.addPerson();
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter department: ");
         setDepartment(scanner.nextLine());
         System.out.print("Enter teaching subject: ");
@@ -46,7 +44,6 @@ public class Teacher extends Person {
     @Override
     public void updatePerson() {
         super.updatePerson();
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter department: ");
         setDepartment(scanner.nextLine());
         System.out.print("Enter teaching subject: ");
