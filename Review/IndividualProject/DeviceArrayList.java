@@ -98,7 +98,7 @@ public class DeviceArrayList {
             totalCurrent += device.calculateCurrentValue();
         }
         System.out.println("=== INVENTORY VALUATION ===");
-        System.out.printf("Total Initial Value: $%.2f\n", totalOriginal);
-        System.out.printf("Total Depreciated Current Value: $%.2f\n", totalCurrent);
+        System.out.printf("Total Initial Value: %.2f\n", totalOriginal);
+        System.out.printf("Total Depreciated Current Value: %.2f\n", totalCurrent);
     }
 }

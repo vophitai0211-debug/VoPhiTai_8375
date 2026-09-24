@@ -58,9 +58,9 @@ public class Processor {
                     break;
                 case 5:
                     try {
-                        System.out.print("Enter minimum price ($): ");
+                        System.out.print("Enter minimum price: ");
                         double min = Double.parseDouble(scanner.nextLine().trim());
-                        System.out.print("Enter maximum price ($): ");
+                        System.out.print("Enter maximum price: ");
                         double max = Double.parseDouble(scanner.nextLine().trim());
                         manager.filterDevicesByPrice(min, max);
                     } catch (NumberFormatException e) {

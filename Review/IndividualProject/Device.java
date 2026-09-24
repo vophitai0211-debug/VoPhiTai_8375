@@ -92,12 +92,7 @@ public abstract class Device implements IDevice {
             System.out.print("Is available in stock (true/false): ");
             setAvailable(Boolean.parseBoolean(scanner.nextLine().trim()));
         } catch (ParseException e) {
-            System.out.println("Invalid date format! Defaulting to current date.");
-            setImportDate(new Date());
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid number format! Setting default numbers.");
-            setOriginalPrice(0.0);
-            setWarrantyMonths(12);
+            System.out.println(e);
         }
     }
 
@@ -108,18 +103,16 @@ public abstract class Device implements IDevice {
         try {
             System.out.print("Enter new name: ");
             setName(scanner.nextLine().trim());
-            System.out.print("Enter new price ($): ");
+            System.out.print("Enter new price: ");
             setOriginalPrice(Double.parseDouble(scanner.nextLine().trim()));
             System.out.print("Enter new import date (dd/MM/yyyy): ");
             setImportDate(sdf.parse(scanner.nextLine().trim()));
-            System.out.print("Enter new warranty duration (months): ");
+            System.out.print("Enter new warranty duration: ");
             setWarrantyMonths(Integer.parseInt(scanner.nextLine().trim()));
             System.out.print("Is available (true/false): ");
             setAvailable(Boolean.parseBoolean(scanner.nextLine().trim()));
         } catch (ParseException e) {
-            System.out.println("Invalid date format! Skipping date update.");
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid number input! Skipping numeric update.");
+            System.out.println(e);
         }
     }
 

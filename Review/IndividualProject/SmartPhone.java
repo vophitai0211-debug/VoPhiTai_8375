@@ -47,9 +47,9 @@ public class SmartPhone extends Device {
     public void addDeviceInfo() {
         super.addDeviceInfo();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter battery capacity (mAh): ");
+        System.out.print("Enter battery capacity: ");
         setBatteryCapacity(Integer.parseInt(scanner.nextLine().trim()));
-        System.out.print("Enter main camera resolution (MP): ");
+        System.out.print("Enter main camera resolution: ");
         setCameraResolution(Integer.parseInt(scanner.nextLine().trim()));
         System.out.print("Supports 5G (true/false): ");
         setHas5GSupport(Boolean.parseBoolean(scanner.nextLine().trim()));
@@ -59,9 +59,9 @@ public class SmartPhone extends Device {
     public void updateDeviceInfo() {
         super.updateDeviceInfo();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter new battery capacity (mAh): ");
+        System.out.print("Enter new battery capacity: ");
         setBatteryCapacity(Integer.parseInt(scanner.nextLine().trim()));
-        System.out.print("Enter new camera resolution (MP): ");
+        System.out.print("Enter new camera resolution: ");
         setCameraResolution(Integer.parseInt(scanner.nextLine().trim()));
         System.out.print("Supports 5G (true/false): ");
         setHas5GSupport(Boolean.parseBoolean(scanner.nextLine().trim()));

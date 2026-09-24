@@ -47,9 +47,9 @@ public class Laptop extends Device {
     public void addDeviceInfo() {
         super.addDeviceInfo();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter RAM capacity (GB): ");
+        System.out.print("Enter RAM capacity: ");
         setRamGb(Integer.parseInt(scanner.nextLine().trim()));
-        System.out.print("Enter Processor (e.g., Intel i7, Apple M3): ");
+        System.out.print("Enter Processor: ");
         setProcessor(scanner.nextLine().trim());
         System.out.print("Is touchscreen (true/false): ");
         setTouchscreen(Boolean.parseBoolean(scanner.nextLine().trim()));
@@ -59,7 +59,7 @@ public class Laptop extends Device {
     public void updateDeviceInfo() {
         super.updateDeviceInfo();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter new RAM capacity (GB): ");
+        System.out.print("Enter new RAM capacity: ");
         setRamGb(Integer.parseInt(scanner.nextLine().trim()));
         System.out.print("Enter new Processor: ");
         setProcessor(scanner.nextLine().trim());
