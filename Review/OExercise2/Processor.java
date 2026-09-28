@@ -33,7 +33,7 @@ public class Processor {
                         Teacher teacher = new Teacher();
                         teacher.addPersonInfo();
                         personList.addPersonInfo(teacher);
-                        System.out.println("Add student complete");
+                        System.out.println("Add teacher complete");
                     } else {
                         System.out.println("Error");
                     }
@@ -55,6 +55,7 @@ public class Processor {
                     personList.displayEveryone();
                     break;
                 case 5:
+                    scanner.nextLine();
                     System.out.println("Enter department to find teacher");
                     String department = scanner.nextLine();
                     personList.findTeacherByDepartment(department);
