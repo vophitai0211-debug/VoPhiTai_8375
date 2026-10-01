@@ -25,8 +25,7 @@ public abstract class Product implements IProduct {
         this.isAvailable = isAvailable;
         this.quantity = quantity;
     }
-
-    // Getters và Setters
+    
     public String getId() {
         return id;
     }
