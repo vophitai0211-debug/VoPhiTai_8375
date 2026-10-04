@@ -24,7 +24,7 @@ public abstract class Product implements IProduct {
         this.isAvailable = isAvailable;
         this.quantity = quantity;
     }
-    
+
     public String getId() {
         return id;
     }
